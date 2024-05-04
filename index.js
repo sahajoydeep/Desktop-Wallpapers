@@ -1,12 +1,12 @@
-function randomImage() {
+    function randomImage() {
     const options = ["images/2084220.jpg", "images/image1.jpg","images/image2.jpg","images/image3.jpg","images/image4.jpg","images/image5.jpg", "images/image6.jpg", "images/image7.jpg", "images/image8.jpg", "images/image9.jpg", "images/image10.jpg", "images/image11.jpg", "images/image12.jpg"];
     const img = document.querySelector("#desktop");
     setInterval(function() {
         const randomIMG = options[Math.floor(Math.random() * options.length)];
         img.src = randomIMG;
         img.alt = "";
-    }, 3000); 
-}
+    }, 2500); 
+
     const colors = [
         "rgb(255, 218, 185)", // Peach
         "rgb(173, 216, 230)", // Light Blue
@@ -25,11 +25,12 @@ function randomImage() {
         "rgb(255, 240, 245)"  // Lavender Blush
       ];
       
-  let currentIndex = 0;
+      let currentIndex = 0;
 
-function changeBackgroundColor() {
-  document.body.style.backgroundColor = colors[currentIndex];
-  currentIndex = (currentIndex + 1) % colors.length;
+      function changeBackgroundColor() {
+        document.body.style.backgroundColor = colors[currentIndex];
+        currentIndex = (currentIndex + 1) % colors.length;
+      }
+      
+      setInterval(changeBackgroundColor, 2500);
 }
-
-setInterval(changeBackgroundColor, 3000);
